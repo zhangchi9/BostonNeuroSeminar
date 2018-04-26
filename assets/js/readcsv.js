@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-   url:"http://localhost:8000/Talks.csv",
+   url:"https://zhangchi9.github.io/BostonNeuroSeminar/Talks.csv",
    dataType:"text",
    success:function(data)
    {
