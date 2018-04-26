@@ -9,7 +9,7 @@
  <body>
   <div class="container">
    <div class="table-responsive">
-    <h1 align="center">change the java script</h1>
+    <h1 align="center">change the java script2</h1>
     <br />
 
     <br />
@@ -48,23 +48,10 @@ $(document).ready(function(){
       }
       else
       {
-        var x = new Date(cell_data[0]);
-        if (+x >= +today) {
-          if (+x === +today) {
-            if (cell_count==0) {
-              table_data += '<td>'+'Today'+'</td>';
-            } else {
-              table_data += '<td>'+cell_data[cell_count]+'</td>';
-            }
-          } else {
-            table_data += '<td>'+cell_data[cell_count]+'</td>';
-          }
-       } 
-       else {
-           break;
-       } ;
-      }
+        table_data += '<td>'+cell_data[cell_count]+'</td>';
+      } ;
      }
+    
      table_data += '</tr>';
     }
 
