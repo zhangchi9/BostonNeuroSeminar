@@ -22,7 +22,6 @@
 
 <script>
 $(document).ready(function(){
- $('#load_data').click(function(){
   $.ajax({
    url:"https://zhangchi9.github.io/BostonNeuroSeminar/Talks.csv",
    dataType:"text",
@@ -48,10 +47,10 @@ $(document).ready(function(){
      table_data += '</tr>';
     }
     table_data += '</table>';
+    console.log(table_data)
     $('#employee_table').html(table_data);
+
    }
   });
  });
- 
-});
 </script>
