@@ -21,7 +21,7 @@ $(document).ready(function(){
       if (count === 0) 
       {
         if (cell_count===0) { table_data += '<tr>'}
-        table_data += '<th>'+cell_data[cell_count]+'</th>';
+        table_data += '<td>'+cell_data[cell_count]+'</td>';
         if (cell_count===(cell_data.length-1)) { table_data += '</tr>'}
       } 
       else 
