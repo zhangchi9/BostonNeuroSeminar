@@ -16,33 +16,28 @@ $(document).ready(function(){
     for(var count = 0; count<=employee_data.length-2; count++)
     {
      var cell_data = employee_data[count].split("#");
-     table_data += '<tr>';
      for(var cell_count=0; cell_count<=cell_data.length-1; cell_count++)
      {
-      if(count === 0)
+      if (count === 0) 
       {
-       table_data += '<th>'+cell_data[cell_count]+'</th>';
-      }
-      else
+        if (cell_count===0) { table_data += '<tr>'}
+        table_data += '<th>'+cell_data[cell_count]+'</th>';
+        if (cell_count===(cell_data.length-1)) { table_data += '</tr>'}
+      } 
+      else 
       {
         var x = new Date(cell_data[0]);
-        if (true) {
-          if (+x === +today) {
-            if (cell_count==0) {
-              table_data += '<td>'+'Today'+'</td>';
-            } else {
-              table_data += '<td>'+cell_data[cell_count]+'</td>';
-            }
-          } else {
-            table_data += '<td>'+cell_data[cell_count]+'</td>';
-          }
+        if (+x >= +today) {
+          if (cell_count===0) { table_data += '<tr>'}
+          table_data += '<td>'+cell_data[cell_count]+'</td>';
+          if (cell_count===(cell_data.length-1)) { table_data += '</tr>'}
        } 
        else {
            break;
        } ;
+
       }
      }
-     table_data += '</tr>';
     }
 
     table_data += '</table>';
