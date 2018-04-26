@@ -26,7 +26,7 @@ $(document).ready(function(){
       else
       {
         var x = new Date(cell_data[0]);
-        if (true) {
+        if (+x >= +today) {
           if (!true) {
             if (cell_count==0) {
               table_data += '<td>'+'Today'+'</td>';
